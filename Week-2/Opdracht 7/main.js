@@ -5,5 +5,3 @@ function kleur_aanpassen() {
     console.log(titel)
 }
 
-
-document.getElementById("kleur_aanpassen()").onclick = function() {kleur_aanpassen()};
