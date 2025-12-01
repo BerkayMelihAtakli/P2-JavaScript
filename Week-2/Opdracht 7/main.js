@@ -6,4 +6,4 @@ function kleur_aanpassen() {
 }
 
 
-document.getElementById("h1").onclick = function() {kleur_aanpassen()};
+document.getElementById("kleur_aanpassen()").onclick = function() {kleur_aanpassen()};
