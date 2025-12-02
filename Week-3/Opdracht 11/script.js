@@ -1,5 +1,5 @@
 let budget = 100;
-let product = 110;
+let product = 60;
 let Waarde = document.getElementById("Waarde");
 
 if (budget >= product) {
