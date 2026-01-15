@@ -17,15 +17,22 @@ function update() {
 
 function givepizza() {
     pizzacount++;
-    update();
+    
    
 
     if (pizzacount >=10) {
     pizza.textContent = `${pizzacount} YOU WON!🍕 `;
     pizza.style.color = "white";
     document.body.style.backgroundColor = 'black';
+    overlay.style.display = "flex"; 
+    update();
     
     return;
+    }
+
+    else if (pizzacount >=20) {
+        pizza.textContent = `${pizzacount}  Klasse-traktatie!🍕 `;
+        pizza.style.color = 'white';
     }
 
     else if (pizzacount >= 5 && pizzacount < 10) {
@@ -46,6 +53,7 @@ function resetgame() {
     pizzacount = 0;
     pizza.innerHTML = "0 🍕";
     update();
+    overlay.style.display = "none";
 
 }
 
@@ -55,4 +63,11 @@ function minpizzas() {
     }
         update();
 }
+
+let overlay = document.getElementById("overlay");
+
+function closeOverlay() {
+    overlay.style.display = "none";
+}
+
 
