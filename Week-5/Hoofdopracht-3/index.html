@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Toekomst Voorspeller</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    padding: 40px;
+}
+
+.scherm {
+    display: none;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.actief {
+    display: block;
+    opacity: 1;
+}
+
+.positief { color: green; }
+.negatief { color: red; }
+.neutraal { color: orange; }
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="startScherm" class="scherm actief">
+    <h1>🔮 Stel een ja/nee vraag</h1>
+    <input type="text" id="vraagInput" placeholder="Typ je vraag...">
+    <br>
+    <button id="voorspelKnop">Ontdek je toekomst</button>
+    <p id="waarschuwing"></p>
+</div>
+
+<div id="antwoordScherm" class="scherm">
+    <h2>Jouw vraag:</h2>
+    <p id="toonVraag"></p>
+
+    <h2>Het antwoord:</h2>
+    <p id="toonAntwoord"></p>
+
+    <button id="opnieuwKnop">Opnieuw beginnen</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
