@@ -1,13 +1,24 @@
-const activiteiten = ["wandelen", "mediteren", "een dutje doen"];
-const themas = ["een kop thee", "je favoriete boek", "je telefoon uitzetten"];
-let activieitdiv = document.getElementById("activiteitdiv");
-let index = document.getElementById("index");
+const adviezen = [
+    "wandelen met een kop thee",
+    "mediteren met je favoriete boek",
+    "een dutje doen met je telefoon uitzetten"
+];
 
-button.addEventListener("click", activiteit);
+let overgebleven = [...adviezen];
 
+const button = document.getElementById("button");
+const advies = document.getElementById("advies");
 
-function activiteit() {
+button.addEventListener("click", geefAdvies);
 
-    const randomIndex = Math.floor(Math.random() * activiteiten.length);
-    activieitdiv.textContent = activiteiten[randomIndex]; 
+function geefAdvies() {
+
+    if (overgebleven.length === 0) {
+        overgebleven = [...adviezen]; 
+    }
+
+    const randomIndex = Math.floor(Math.random() * overgebleven.length);
+    const gekozen = overgebleven.splice(randomIndex, 1);
+
+    advies.textContent = "Vandaag moet jij " + gekozen + ".";
 }
